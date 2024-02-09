@@ -10,7 +10,9 @@ window.addEventListener('scroll', e => {
     header.classList[window.scrollY > 50 ? "add" : "remove"]("active");
 });
 
-let toggleBtns = document.querySelector("[data-toggle-btn]");
+let toggleBtns = document.querySelectorAll("[data-toggle-btn]");
+
+toggleBtns = [...toggleBtns];
 
 toggleBtns.forEach(toggleBtn => {
     toggleBtn.addEventListener("click", () => {
